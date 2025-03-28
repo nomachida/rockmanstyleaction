@@ -1,0 +1,176 @@
+{
+    "game_name": "ロックマン風アクション",
+    "game_type": "action",
+    "description": "初代ロックマン風の横スクロールアクションゲーム",
+    "features": {
+        "graphics": {
+            "style": "8bit",
+            "resolution": {
+                "width": 800,
+                "height": 600
+            },
+            "sprites": {
+                "player": {
+                    "size": [
+                        32,
+                        32
+                    ],
+                    "animations": [
+                        "idle",
+                        "run",
+                        "jump",
+                        "shoot",
+                        "charge"
+                    ]
+                },
+                "enemies": {
+                    "patrol": {
+                        "size": [
+                            32,
+                            32
+                        ],
+                        "animations": [
+                            "move",
+                            "attack"
+                        ]
+                    },
+                    "turret": {
+                        "size": [
+                            32,
+                            32
+                        ],
+                        "animations": [
+                            "idle",
+                            "shoot"
+                        ]
+                    }
+                },
+                "items": {
+                    "health": {
+                        "size": [
+                            16,
+                            16
+                        ]
+                    },
+                    "weapon_energy": {
+                        "size": [
+                            16,
+                            16
+                        ]
+                    }
+                }
+            }
+        },
+        "physics": {
+            "gravity": 800,
+            "player": {
+                "speed": 200,
+                "jump_force": 400,
+                "shot_speed": 300
+            }
+        },
+        "gameplay": {
+            "player": {
+                "max_health": 28,
+                "damage": {
+                    "normal_shot": 1,
+                    "charge_shot": 3
+                }
+            },
+            "enemies": {
+                "patrol": {
+                    "health": 3,
+                    "damage": 2,
+                    "speed": 100
+                },
+                "turret": {
+                    "health": 2,
+                    "damage": 1,
+                    "shot_interval": 2.0
+                }
+            }
+        },
+        "stage": {
+            "width": 2400,
+            "height": 600,
+            "checkpoints": [
+                {
+                    "x": 0,
+                    "y": 500
+                },
+                {
+                    "x": 1200,
+                    "y": 500
+                }
+            ],
+            "platforms": [
+                {
+                    "type": "ground",
+                    "x": 0,
+                    "y": 550,
+                    "width": 2400,
+                    "height": 50
+                },
+                {
+                    "type": "platform",
+                    "x": 300,
+                    "y": 400,
+                    "width": 200,
+                    "height": 20
+                },
+                {
+                    "type": "moving_platform",
+                    "x": 600,
+                    "y": 300,
+                    "width": 100,
+                    "height": 20,
+                    "movement": {
+                        "type": "horizontal",
+                        "distance": 200,
+                        "speed": 100
+                    }
+                },
+                {
+                    "type": "ladder",
+                    "x": 900,
+                    "y": 300,
+                    "width": 32,
+                    "height": 250
+                }
+            ],
+            "hazards": [
+                {
+                    "type": "spikes",
+                    "x": 500,
+                    "y": 530,
+                    "width": 32,
+                    "height": 20
+                }
+            ],
+            "enemies": [
+                {
+                    "type": "patrol",
+                    "x": 400,
+                    "y": 500
+                },
+                {
+                    "type": "turret",
+                    "x": 800,
+                    "y": 300
+                }
+            ],
+            "items": [
+                {
+                    "type": "health",
+                    "x": 600,
+                    "y": 400
+                },
+                {
+                    "type": "weapon_energy",
+                    "x": 1000,
+                    "y": 400
+                }
+            ]
+        }
+    }
+}
