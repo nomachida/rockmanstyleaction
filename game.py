@@ -54,6 +54,7 @@ class Enemy:
     def __init__(self, x, y, enemy_type):
         self.x = x
         self.y = y
+        self.initial_x = x  # 初期位置を保存
         self.type = enemy_type
         self.width = config['features']['graphics']['sprites']['enemies'][enemy_type]['size'][0]
         self.height = config['features']['graphics']['sprites']['enemies'][enemy_type]['size'][1]
